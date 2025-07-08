@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.unhide {
+  display: block;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1% 5%;
+  background-color: white;
+}
+
+.logo-img {
+  width: auto;
+  height: 50px;
+}
+
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #0073cf;
+}
+
+/* Main */
+main {
+  width: auto;
+  text-align: center;
+  margin: 5% 10%;
+  padding: 0 5%;
+}
+
+.message {
+  font-family: "Montserrat", sans-serif;
+}
+
+#thanks-message {
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+#success-message {
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+#request-message {
+  font-size: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+#failure-reason {
+  font-size: 1.25rem;
+  color: red;
+  padding-bottom: 2.5rem;
+}
+
+#redirecting-message {
+  font-size: 0.8rem;
+}
+
+/* Button Section */
+.submit-container {
+  margin: 1% 10%;
+  padding: 1% 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn {
+  height: 40px;
+  width: 150px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  background-color: #0073cf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #002447;
+}

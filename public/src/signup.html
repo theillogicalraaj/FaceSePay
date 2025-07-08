@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sign Up - FaceSePay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./signup.css">
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyD9Ul1MxtBPEgD3pozPWPgLzEwi89BgFpw",
+      authDomain: "facee-90b58.firebaseapp.com",
+      databaseURL: "https://facee-90b58-default-rtdb.firebaseio.com",
+      projectId: "facee-90b58",
+      storageBucket: "facee-90b58.appspot.com",
+      messagingSenderId: "546096129442",
+      appId: "1:546096129442:web:749194ecd7b7e2f4c87efb"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+  </script>
+</head>
+
+<body>
+
+  <!-- Header with logo and text -->
+  <header>
+    <div class="logo-container">
+      <a class="logo" href="../index.html">
+        <img src="../images/logo.png" alt="FaceSePay Logo" class="logo-img">
+      </a>
+      <span class="logo-text">FaceSePay</span>
+    </div>
+  </header>
+
+  <!-- Main Signup Section -->
+  <main>
+    <div class="section-container">
+      <div class="imgBx">
+        <img src="../images/signupM.jpg" alt="Signup Illustration">
+      </div>
+
+      <div class="mb-5">
+        <h3 class="mb-3">Welcome to FaceSePay!</h3>
+
+        <input type="text" placeholder="Full Name" id="nameInp" class="form-control mb-3">
+        <input type="email" placeholder="Email" id="emailInp" class="form-control mb-3">
+        <input type="text" placeholder="Username" id="userInp" class="form-control mb-3">
+        <input type="text" placeholder="Phone Number" id="phoneInp" class="form-control mb-3">
+        <input type="password" placeholder="Password" id="passInp" class="form-control mb-3">
+
+        <button type="button" id="sub_btn" class="btn w-100 btn-outline-primary mb-3" onclick="signupUser()">Register</button>
+
+        <div class="ask-account">
+          Already have an account? <a href="./login.html">Log In</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Signup Logic -->
+  <script>
+    function signupUser() {
+      const name = document.getElementById('nameInp').value.trim();
+      const email = document.getElementById('emailInp').value.trim();
+      const username = document.getElementById('userInp').value.trim();
+      const phone = document.getElementById('phoneInp').value.trim();
+      const password = document.getElementById('passInp').value.trim();
+
+      if (!name || !email || !username || !phone || !password) {
+        swal("Error", "Please fill all fields", "error");
+        return;
+      }
+
+      const encryptedPassword = CryptoJS.AES.encrypt(password, "Secret Pass").toString();
+      const emailKey = email.replace(/[.#$[\]]/g, "");
+
+      const userData = {
+        fullname: name,
+        email: email,
+        username: username,
+        phone: phone,
+        profileImgURL: "null",
+        password: encryptedPassword
+      };
+
+      database.ref('UsersList/' + emailKey).set(userData)
+        .then(() => {
+          swal("Success", "Account Created Successfully!", "success").then(() => {
+            window.location.href = "./login.html";
+          });
+        })
+        .catch(error => {
+          swal("Error", error.message, "error");
+        });
+    }
+  </script>
+
+</body>
+</html>

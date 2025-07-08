@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Login - FaceSePay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../images/favicon.png" type="image/icon type" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./login.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Firebase v8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-wrapper" onclick="window.location.href='../index.html'">
+    <img src="../images/logo.png" alt="logo" class="logo-img" />
+    <span class="logo-text">FaceSePay</span>
+  </div>
+</header>
+
+<main>
+  <div class="section-container">
+    <div class="imgBx">
+      <img src="../images/loginF.jpg" alt="Login Image" />
+    </div>
+
+    <div class="mb-5">
+      <h3 class="mb-3">Welcome Back!</h3>
+
+      <input type="email" placeholder="Email" id="emailInp" class="form-control mb-3" />
+      <input type="password" placeholder="Password" id="passInp" class="form-control mb-3" />
+
+      <div class="custom-control custom-switch mb-3">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" />
+        <label class="custom-control-label" for="customSwitch1">Keep me Logged In</label>
+      </div>
+
+      <button type="button" id="loginBtn" class="btn w-100 btn-outline-primary mb-3">Log In</button>
+
+      <div class="ask-account">
+        Don't have an account? <a class="ask-account-link" href="./signup.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyD9Ul1MxtBPEgD3pozPWPgLzEwi89BgFpw",
+    authDomain: "facee-90b58.firebaseapp.com",
+    projectId: "facee-90b58",
+    databaseURL: "https://facee-90b58-default-rtdb.firebaseio.com",
+    storageBucket: "facee-90b58.appspot.com",
+    messagingSenderId: "546096129442",
+    appId: "1:546096129442:web:749194ecd7b7e2f4c87efb"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.database();
+
+  document.getElementById('loginBtn').addEventListener('click', function () {
+    const email = document.getElementById('emailInp').value.trim();
+    const password = document.getElementById('passInp').value.trim();
+    const keepLoggedIn = document.getElementById('customSwitch1').checked;
+
+    if (!email || !password) {
+      swal("Error", "Please fill all fields", "error");
+      return;
+    }
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        const emailKey = email.replace(/[.#$[\]]/g, '');
+        
+        db.ref('UsersList/' + emailKey).once('value').then((snapshot) => {
+          if (snapshot.exists()) {
+            const userData = snapshot.val();
+
+            if (keepLoggedIn) {
+              localStorage.setItem('keepLoggedIn', 'yes');
+              localStorage.setItem('user', JSON.stringify(userData));
+            } else {
+              sessionStorage.setItem('user', JSON.stringify(userData));
+            }
+
+            swal("सफल", "Login Successful", "success").then(() => {
+              window.location.href = "../index.html";
+            });
+
+          } else {
+            swal("Error", "User data missing in database.", "error");
+          }
+        });
+
+      })
+      .catch((error) => {
+        swal("Error", error.message, "error");
+      });
+  });
+</script>
+
+</body>
+</html>

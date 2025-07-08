@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.hide {
+  display: none !important;
+}
+
+.unhide {
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: white;
+  min-height: 140px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: 700;
+  color: #002447;
+  margin-left: 12px;
+}
+
+#signup {
+  font-weight: 700;
+  color: #002447;
+  text-decoration: none;
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#signup:hover {
+  color: #0073cf;
+}
+
+#login {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 9px 25px;
+  background-color: #0073cf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#login:hover {
+  background-color: #002447;
+}
+
+#profile {
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+.profile-logo {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #0073cf;
+  background-color: white;
+}
+
+/* ---------- MAIN ---------- */
+.main-container {
+  margin: 0% 10%;
+}
+
+.welcome-container {
+  padding: 1% 5%;
+  background-color: white;
+}
+
+.welcome-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0073cf;
+  text-align: center;
+}
+
+.welcome-text0 {
+  font-weight: 700;
+  font-size: 22px;
+  color: #0073cf;
+  text-align: center;
+}
+
+.transaction-type-container {
+  padding: 1% 10%;
+  background-color: white;
+}
+
+.transaction-type {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.transaction-type span {
+  font-weight: 700;
+  color: #002447;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-type span:hover {
+  background-color: #ffc439;
+  border-radius: 25px;
+}
+
+.transaction-container {
+  width: auto;
+  padding: 1% 3%;
+  background-color: #002447;
+  border-radius: 20px;
+}
+
+#wallet-transfer-container,
+#bank-transfer-container {
+  display: flex;
+}
+
+.transfer-type {
+  width: 50%;
+}
+
+.transfer-title {
+  font-size: 1.5em;
+  color: white;
+  margin: 0 2.5%;
+  padding: 1% 0;
+}
+
+#bank-transfer-container .transfer-title {
+  text-align: end;
+}
+
+.transfer-detail {
+  background: white;
+  margin: 0 2.5% 0 0;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#bank-transfer-container .transfer-detail {
+  margin: 0;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+}
+
+.wallet-form,
+.bank-form {
+  padding: 10px 15px;
+}
+
+.last-form-input-wallet,
+.last-form-input-bank {
+  padding-bottom: 20px;
+}
+
+.box-title {
+  font-size: 11px;
+  color: #0073cf;
+  padding: 0 0 5px 10px;
+}
+
+.box-input {
+  font-size: 14px;
+  color: grey;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- IMAGE BOX ---------- */
+.imgBx {
+  width: 50%;
+  margin-left: 1.25%;
+}
+
+.imgBx img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#bank-transfer-container .imgBx {
+  margin-right: 1.25%;
+}
+
+/* ---------- FOOTER ---------- */
+.submit-container {
+  margin: 1% 10%;
+  padding: 1% 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-btn {
+  background-color: #ffc439;
+  font-weight: 700;
+  font-size: 16px;
+  color: #002447;
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background-color: #fba81c;
+}
