@@ -10,22 +10,19 @@ Only verified users are allowed to proceed with transactions — if the match fa
 
 ## 📸 Screenshots
 
-### Home Page
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c8b7d733-13d3-4ff8-9df2-c37577f1ec2c" />
 
-### Profile Upload
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b2ba2fa5-98b4-4357-b1d7-c34f65aa33f5" />
 
-### Authentication Start
+
 <img width="1486" height="686" alt="Image" src="https://github.com/user-attachments/assets/b683ff99-23a2-4688-84c0-2de865a38c0d" />
 
-### Face Verification (Success)
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3fb18347-8d1f-457c-901e-798973abf9fb" />
 
-### Face Verification (Failure)
+
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c9e3feef-549a-4534-9288-cda2d4fb3ad1" />
 
-### Transaction Result
+
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/94762d8f-7c54-472d-a7c6-03cc8280e560" />
 
 ---
