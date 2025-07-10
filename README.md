@@ -118,29 +118,6 @@ If the person in front of the camera does not match the uploaded photo:
 
 ---
 
-## 🤖 How Face Recognition Works
-
-- Uses **face-api.js** + **TensorFlow.js**
-- Live face is converted into a 128-number vector (face descriptor)
-- Compared with stored image
-- Matching is done using **Euclidean distance**
-  - ✅ Match → allow payment  
-  - ❌ Not match → block
-
----
-
-## 💻 Technologies Used
-
-| Area          | Technology              |
-|---------------|--------------------------|
-| Frontend      | HTML, CSS, Bootstrap     |
-| Backend       | Node.js + Express        |
-| Authentication| face-api.js (TensorFlow.js) |
-| Database      | Firebase                 |
-| ML Model      | ResNet-34 + SSD MobileNet |
-
----
-
 
 
 ## 🚀 How to Use
