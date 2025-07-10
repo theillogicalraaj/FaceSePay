@@ -19,7 +19,7 @@ Instead of passwords or OTPs, the system uses your **live webcam** to verify you
 ---
 
 ### 🏠 1. Home Page  
-[Home]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/42cf4cd6-b17a-4604-b860-1f2c2b339a1d" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/42cf4cd6-b17a-4604-b860-1f2c2b339a1d" />
 
 
 This is the welcome screen.  
@@ -32,7 +32,7 @@ Simple and clean UI.
 ---
 
 ### 📝 2. Sign Up Page  
-[Sign Up]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/66120ba6-8fa3-4700-9d2c-b2e46bb706b9" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/66120ba6-8fa3-4700-9d2c-b2e46bb706b9" />
 
 
 New users register by entering:
@@ -46,7 +46,7 @@ Their data is saved in **Firebase**, and they can then log in.
 ---
 
 ### 🔐 3. Login Page  
-[Login]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a556dd4b-523e-4bac-99a3-14a8f261652a" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a556dd4b-523e-4bac-99a3-14a8f261652a" />
 
 
 Registered users enter their **email and password**.  
@@ -62,7 +62,7 @@ This is saved as the reference image for future verification.
 ---
 
 ### 👤 4b. Profile Page  
-[Profile]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a79663ce-b3a0-4336-a152-f1ea01d6f551" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a79663ce-b3a0-4336-a152-f1ea01d6f551" />
 
 
 This is the user's dashboard:
@@ -75,8 +75,8 @@ This uploaded photo is later used for live face matching.
 ---
 
 ### 💸 5. Transfer Money  
-[Transfer]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d71289a2-a459-4c4d-a67b-182646190294" />
-
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d71289a2-a459-4c4d-a67b-182646190294" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/f39d5bfb-4979-4f59-9537-14f76562a3bc" />
 
 User chooses:
 - **Wallet transfer** (via FaceSePay ID or phone)
@@ -88,7 +88,7 @@ They enter amount + receiver details.
 ---
 
 ### 📷 6. Live Face Verification  
-[Verification]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/428720e5-8c9f-43e9-8bea-66e7587d5ddb" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/428720e5-8c9f-43e9-8bea-66e7587d5ddb" />
 
 Before the final payment step, the webcam turns on.  
 It compares the live face with the uploaded photo using **ML model**.
@@ -100,7 +100,7 @@ If not = block
 
 
 ### ✅ 7. Transaction Success (Face Matched)  
-[Transaction Success]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/96f4c103-2833-4ab5-957c-92d7b246abda" />
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/96f4c103-2833-4ab5-957c-92d7b246abda" />
 
 If the face is verified correctly:  
 - Payment is processed ✅  
@@ -110,7 +110,7 @@ If the face is verified correctly:
 
 
 ### ❌ 9. Face Mismatch – Transaction Blocked  
-🚧 *(To be added by you later)*
+🚧 *------*
 
 If the person in front of the camera does not match the uploaded photo:  
 - Transaction is blocked  
