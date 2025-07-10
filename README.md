@@ -1,4 +1,4 @@
-# 💳 FaceSePay – A Secure Way to Pay with Your Face
+# 💳 FaceSePay – Secure Online Transaction System
 
 **FaceSePay** is a smart payment system where your **face is the key**.  
 Instead of passwords or OTPs, the system uses your **live webcam** to verify your identity before allowing transactions.
