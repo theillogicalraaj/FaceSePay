@@ -131,7 +131,7 @@ To get started, you just need a browser.
 3. Install [Node.js](https://nodejs.org/en/). npm will be installed automatically.
 4. Run `npm install` in the terminal to install all dependencies.
 5. Run `node server.js` to start the server locally on port 3000.
-6. Visit `http://localhost:3000/` in your browser.
+6. Visit `http://localhost:5000/` in your browser.
 7. Press `Ctrl + C` in terminal to stop the server.
 
 ---
