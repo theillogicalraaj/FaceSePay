@@ -136,19 +136,6 @@ To get started, you just need a browser.
 
 ---
 
-### 🧑‍💻 While Using the Application
-
-1. Click **Sign Up** to register a new user.
-2. Log in with your credentials.
-3. Click the profile icon to upload a face image.
-4. Choose the transaction type and fill in the transaction details.
-5. Click **Next** to launch the camera and load ML models.
-6. Click **Start Verification** to scan your face.
-7. If verified, click **Pay**. A success screen will appear.
-8. If not verified, the transaction is rejected.
-
----
-
 ## 💻 Technology Stack
 
 - **Frontend:** HTML, CSS, Bootstrap  
